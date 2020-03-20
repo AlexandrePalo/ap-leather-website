@@ -28,21 +28,14 @@ const ProductCard = ({ images, name, minPrice, onClickDiscover }) => {
             </div>
             <div className="flex flex-row p-4 items-center justify-between">
                 <div className="flex flex-col">
-                    <span className="text-gray-800 font-bold">{name}</span>
-                    <span className="text-gray-600">
+                    <span className="text-gray-800 font-bold text-sm">
+                        {name}
+                    </span>
+                    <span className="text-gray-600 text-xs">
                         A PARTIR DE {minPrice}€
                     </span>
                 </div>
-                <ButtonLink
-                    label="DECOUVRIR"
-                    onClick={() => {
-                        onClickDiscover()
-                        window.scrollTo({
-                            top: 0,
-                            behavior: 'smooth'
-                        })
-                    }}
-                />
+                <ButtonLink label="DECOUVRIR" onClick={onClickDiscover} />
             </div>
         </div>
     )
@@ -51,7 +44,7 @@ const ProductCard = ({ images, name, minPrice, onClickDiscover }) => {
 const ProductDetailed = ({ images, name, minPrice, descriptions, colors }) => {
     return (
         <div
-            className="rounded-md flex flex-row justify-between max-w-screen-lg mx-auto"
+            className="rounded-md flex flex-row justify-between max-w-screen-lg mx-auto mt-6 mb-12"
             style={{
                 height: '28em',
                 backgroundColor: 'hsl(120, 0%, 90%)'
@@ -149,7 +142,7 @@ const ButtonLink = ({ label, onClick, link }) => {
             />
             <animated.span
                 style={coloring}
-                className="absolute left-0 top-0 w-full h-full flex items-center justify-center"
+                className="absolute left-0 top-0 w-full h-full flex items-center justify-center text-sm"
             >
                 {label}
             </animated.span>
