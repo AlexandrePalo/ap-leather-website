@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { useSpring, animated, useRef, useChain } from 'react-spring'
+import { useSpring, animated } from 'react-spring'
 
-const ProductCard = ({ images, name, minPrice, onClickDiscover }) => {
+const ProductCard = ({ images, name, minPrice, onDiscoverClick }) => {
     const [imgHovered, setImgHovered] = useState(false)
     const zooming = useSpring({
         transform: imgHovered ? 'scale(1.25)' : 'scale(1.0)'
@@ -9,12 +9,11 @@ const ProductCard = ({ images, name, minPrice, onClickDiscover }) => {
 
     return (
         <div
-            className="rounded-md flex flex-col justify-between m-4"
+            className="rounded-md flex flex-col justify-between m-4 bg-primary-very-lighter"
             style={{
                 minWidth: '20em',
                 width: '20em',
-                height: '28em',
-                backgroundColor: 'hsl(120, 0%, 90%)'
+                height: '28em'
             }}
         >
             <div className="overflow-hidden" style={{ height: '80%' }}>
@@ -28,39 +27,46 @@ const ProductCard = ({ images, name, minPrice, onClickDiscover }) => {
             </div>
             <div className="flex flex-row p-4 items-center justify-between">
                 <div className="flex flex-col">
-                    <span className="text-gray-800 font-bold text-sm">
+                    <span className="text-secondary font-bold text-sm">
                         {name}
                     </span>
-                    <span className="text-gray-600 text-xs">
+                    <span className="text-primary-lighter text-xs">
                         A PARTIR DE {minPrice}€
                     </span>
                 </div>
-                <ButtonLink label="DECOUVRIR" onClick={onClickDiscover} />
+                <ButtonLink label="DECOUVRIR" onClick={onDiscoverClick} />
             </div>
         </div>
     )
 }
 
-const ProductDetailed = ({ images, name, minPrice, descriptions, colors }) => {
+const ProductDetailed = ({
+    id,
+    images,
+    name,
+    minPrice,
+    descriptions,
+    colors
+}) => {
     return (
         <div
-            className="rounded-md flex flex-row justify-between max-w-screen-lg mx-auto mt-6 mb-12"
+            className="rounded-md flex flex-row justify-between max-w-screen-lg mx-auto mt-6 mb-12 bg-primary-very-lighter"
             style={{
-                height: '28em',
-                backgroundColor: 'hsl(120, 0%, 90%)'
+                height: '28em'
             }}
         >
             <div className="flex flex-col p-4 items-start justify-between w-5/12">
-                <div className="flex flex-col">
-                    <span className="text-gray-800 font-bold text-2xl">
+                <div className="w-full relative">
+                    <span className="font-bold text-2xl text-secondary">
                         {name}
                     </span>
+                    <div className="h-px w-full bg-secondary absolute left-0 top-full" />
                 </div>
                 <div>
                     {descriptions.map((d, i) => (
                         <p
-                            key={i}
-                            className={`text-gray-700 text-md ${
+                            key={`product-${id}-description-${i}`}
+                            className={`text-base text-primary ${
                                 i > 0 ? 'mt-2' : ''
                             }`}
                         >
@@ -69,19 +75,19 @@ const ProductDetailed = ({ images, name, minPrice, descriptions, colors }) => {
                     ))}
                 </div>
                 <div className="flex flex-col">
-                    <span className="text-lg text-gray-800 font-bold">
-                        Qualité
+                    <span className="text-sm font-bold text-primary-darker">
+                        QUALITE
                     </span>
-                    <span className="text-gray-700 text-md mt-2">
+                    <span className="text-sm mt-2 text-primary">
                         Tous les articles sont créés à Paris avec du cuir
-                        italien de grande qualité et cousus intégralement à la
-                        main.
+                        italien de grande qualité et sont cousus intégralement à
+                        la main au fil de lin.
                     </span>
                     <div className="mt-2 flex flex-row">
                         {colors.map((c, i) => (
                             <span
-                                key={i}
-                                className={`text-gray-700 text-md flex flex-row items-center ${
+                                key={`product-${id}-color-${i}`}
+                                className={`text-sm flex flex-row items-center text-primary-lighter ${
                                     i > 0 ? 'ml-4' : ''
                                 }`}
                             >
@@ -99,7 +105,7 @@ const ProductDetailed = ({ images, name, minPrice, descriptions, colors }) => {
                         label="COMMANDER"
                         link="https://www.etsy.com/fr/"
                     />
-                    <span className="text-gray-600 ml-4">
+                    <span className="text-primary-lighter ml-4">
                         A PARTIR DE {minPrice}€
                     </span>
                 </div>
@@ -125,19 +131,21 @@ const ButtonLink = ({ label, onClick, link }) => {
     const backgroundSpreading = useSpring({
         width: hovered ? '100%' : '0%'
     })
-    const coloring = useSpring({ color: hovered ? '#ffffff' : '#2d3748' })
+    const coloring = useSpring({
+        color: hovered ? '#ffffff' : 'hsl(155, 40%, 20%)' // secondary default
+    })
 
     return (
         <a
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
-            className="h-8 w-32 border-solid border border-gray-800 rounded-sm relative cursor-pointer"
+            className="h-8 w-32 border-solid border border-secondary rounded-sm relative cursor-pointer"
             onClick={onClick}
             href={link}
             target={link ? '_blank' : '_self'}
         >
             <animated.div
-                className="absolute left-0 top-0 h-full bg-gray-800"
+                className="absolute left-0 top-0 h-full bg-secondary"
                 style={backgroundSpreading}
             />
             <animated.span
@@ -158,8 +166,8 @@ const Images = ({ images }) => {
             <div className="absolute top-0 right-0 flex flex-col">
                 {images.map((img, i) => (
                     <Circle
-                        key={i}
-                        className="h-4 w-4 m-2 rounded-full border border-solid border-gray-600"
+                        key={`image-${i}`}
+                        className="h-4 w-4 m-2 rounded-full border border-solid border-secondary"
                         onClick={() => setDisplayed(i)}
                         displayed={i === displayed}
                     />
@@ -168,6 +176,7 @@ const Images = ({ images }) => {
             <img
                 src={images[displayed]}
                 className="h-full w-full object-cover object-center rounded-r-md"
+                alt={`product n°${displayed + 1}`}
             />
         </div>
     )
@@ -176,7 +185,11 @@ const Images = ({ images }) => {
 const Circle = ({ displayed, ...rest }) => {
     const [hovered, setHovered] = useState(false)
     const emphasing = useSpring({
-        backgroundColor: hovered ? '#2d3748' : displayed ? '#2d3748' : '#ffffff' // gray 800
+        backgroundColor: hovered
+            ? 'hsl(155, 40%, 20%)'
+            : displayed
+            ? 'hsl(155, 40%, 20%)'
+            : '#ffffff' // secondary default
     })
     return (
         <animated.div

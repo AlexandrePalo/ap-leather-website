@@ -1,29 +1,28 @@
 import React from 'react'
 import './styles/tailwind.css'
-import bgImg from './media/leather_bg_4.jpg'
-
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Redirect
+} from 'react-router-dom'
 import Header from './Header'
-import ProductPage, { ProductList } from './ProductPage'
-import products from './products'
+import ProductPage from './ProductPage'
+import HomePage from './HomePage'
 
 function App() {
     return (
-        <div>
+        <Router>
             <Header />
-            <div className="w-screen -mt-40" style={{ zIndex: -1 }}>
-                <div
-                    className="bg-green-100 relative"
-                    style={{ paddingBottom: '50%', zIndex: 'inherit' }}
-                >
-                    <img
-                        className="absolute top-0 h-full w-full object-cover object-top z-0"
-                        style={{ zIndex: 'inherit' }}
-                        src={bgImg}
-                    />
-                </div>
-            </div>
-            <ProductList products={products} />
-        </div>
+            <Switch>
+                <Route path="/" exact>
+                    <HomePage />
+                </Route>
+                <Route path="/collections/:id">
+                    <ProductPage />
+                </Route>
+            </Switch>
+        </Router>
     )
 }
 

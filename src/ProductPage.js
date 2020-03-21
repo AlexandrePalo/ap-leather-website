@@ -1,45 +1,44 @@
-import React, { useState } from 'react'
-
+import React, { useEffect } from 'react'
+import { useParams, withRouter } from 'react-router-dom'
 import Product from './Product'
 import products from './products'
 
-const ProductPage = () => {
-    const [detailed, setDetailed] = useState(1)
+const ProductPage = ({ history }) => {
+    let { id: detailed } = useParams()
+    detailed = Number(detailed)
+
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+    }, [detailed])
 
     return (
-        <div className="p-6" style={{ backgroundColor: 'hsl(120, 2%, 19%)' }}>
+        <div className="p-6" style={{ backgroundColor: '#262b2c' }}>
             {detailed ? (
                 <Product {...products.find(p => p.id === detailed)} detailed />
             ) : null}
             <ProductList
                 products={products.filter(p => p.id !== detailed)}
-                onClickDiscover={id => {
-                    setDetailed(id)
-                    window.scrollTo({
-                        top: 0,
-                        behavior: 'smooth'
-                    })
+                onDiscoverClick={id => {
+                    history.push(`/collections/${id}`)
                 }}
             />
         </div>
     )
 }
 
-const ProductList = ({ products, onClickDiscover }) => {
+const ProductList = ({ products, onDiscoverClick }) => {
     return (
         <div className="flex flex-row items-start justify-center flex-wrap my-6">
             {products.map(p => (
                 <Product
                     key={p.id}
                     {...p}
-                    onClickDiscover={() => {
-                        onClickDiscover && onClickDiscover(p.id)
-                    }}
+                    onDiscoverClick={() => onDiscoverClick(p.id)}
                 />
             ))}
         </div>
     )
 }
 
-export default ProductPage
+export default withRouter(ProductPage)
 export { ProductList }
