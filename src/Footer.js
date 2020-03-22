@@ -30,8 +30,8 @@ const Footer = () => {
     return (
         <footer>
             <div className="h-px bg-primary-lighter" />
-            <div className="flex flex-row py-8 px-3 items-start justify-between">
-                <div className="w-1/3 px-4">
+            <div className="px-6 flex flex-col md:flex-row py-8 items-start md:justify-between">
+                <div className="min-w-full md:min-w-0 w-1/3 my-3">
                     <span className="font-bold text-base text-secondary">
                         A PROPOS
                     </span>
@@ -44,7 +44,7 @@ const Footer = () => {
                         modernes et durables pour des objets de tous les jours.
                     </p>
                 </div>
-                <div className="px-4">
+                <div className="min-w-full md:min-w-0 my-3">
                     <span className="font-bold text-base text-secondary">
                         RESEAUX
                     </span>
@@ -58,7 +58,7 @@ const Footer = () => {
                         ))}
                     </div>
                 </div>
-                <div className="w-1/3 px-4 flex flex-col">
+                <div className="min-w-full md:min-w-0 w-1/3 flex flex-col my-3">
                     <span className="font-bold text-base text-secondary">
                         CONTACT
                     </span>

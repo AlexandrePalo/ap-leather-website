@@ -12,7 +12,7 @@ const ProductPage = ({ history }) => {
     }, [detailed])
 
     return (
-        <div className="p-6" style={{ backgroundColor: '#262b2c' }}>
+        <div className="py-8" style={{ backgroundColor: '#262b2c' }}>
             {detailed ? (
                 <Product
                     {...products.find(p => p.id === detailed)}
@@ -32,7 +32,7 @@ const ProductPage = ({ history }) => {
 
 const ProductList = ({ products, onDiscoverClick }) => {
     return (
-        <div className="flex flex-row items-start justify-center flex-wrap my-6">
+        <div className="flex flex-row items-start justify-center flex-wrap">
             {products.map(p => (
                 <Product
                     key={p.id}

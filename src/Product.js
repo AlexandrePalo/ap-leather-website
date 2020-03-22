@@ -9,10 +9,9 @@ const ProductCard = ({ images, name, minPrice, onDiscoverClick }) => {
 
     return (
         <div
-            className="rounded-md flex flex-col justify-between m-4 bg-primary-very-lighter"
+            className="rounded-md flex flex-col justify-between bg-primary-very-lighter m-3"
             style={{
-                minWidth: '20em',
-                width: '20em',
+                width: '19em',
                 height: '28em'
             }}
         >
@@ -59,7 +58,7 @@ const ProductDetailed = ({
 
     return (
         <div
-            className="rounded-md flex flex-row justify-between max-w-screen-lg mx-auto mt-6 mb-12 bg-primary-very-lighter"
+            className="rounded-md flex flex-row justify-between max-w-screen-lg mx-auto bg-primary-very-lighter mb-8"
             style={{
                 height: '28em'
             }}

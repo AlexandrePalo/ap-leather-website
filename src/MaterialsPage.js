@@ -17,7 +17,7 @@ const MaterialPage = () => {
                 <p className="text-base text-primary mt-4">
                     Selon la disponibilté, les cuirs sont issus des tanneries{' '}
                     <span className="font-bold">Conceria Walpier</span> ou{' '}
-                    <span className="font-bold">Tempesti</span>, d'Italie.
+                    <span className="font-bold">Tempesti</span>, en Italie.
                 </p>
                 <p className="text-base text-primary mt-4">
                     Evidemment, tous les cuirs sont{' '}
@@ -49,7 +49,7 @@ const MaterialPage = () => {
                         Vert agave
                     </span>
                 </div>
-                <p className="text-sm text-primary mt-2">
+                <p className="text-sm text-primary-lighter mt-2">
                     D'autres couleurs sont disponibles à la demande.
                 </p>
             </Material>
@@ -70,7 +70,7 @@ const MaterialPage = () => {
                     />
                     Lin blanc
                 </span>
-                <p className="text-sm text-primary mt-2">
+                <p className="text-sm text-primary-lighter mt-2">
                     D'autres couleurs sont disponibles à la demande.
                 </p>
             </Material>
@@ -92,7 +92,7 @@ const MaterialPage = () => {
 
 const Material = ({ title, img, children }) => {
     return (
-        <div className="p-4 flex flex-row my-4">
+        <div className="flex flex-row my-10">
             <div className="w-2/3 mr-8">
                 <div className="relative w-full">
                     <span className="font-bold text-2xl text-secondary">

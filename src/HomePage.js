@@ -13,8 +13,8 @@ const HomePage = props => {
     })
 
     return (
-        <div>
-            <div className="w-screen -mt-40" style={{ zIndex: -1 }}>
+        <div className="pb-8">
+            <div className="w-screen -mt-40 mb-8" style={{ zIndex: -1 }}>
                 <div
                     className="relative overflow-hidden"
                     style={{
