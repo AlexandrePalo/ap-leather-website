@@ -4,8 +4,9 @@ import { Switch, Route, useLocation } from 'react-router-dom'
 import { animated, useTransition } from 'react-spring'
 import Header from './Header'
 import Footer from './Footer'
-import ProductPage from './ProductPage'
 import HomePage from './HomePage'
+import ProductPage from './ProductPage'
+import MaterialPage from './MaterialsPage'
 
 function App() {
     const location = useLocation()
@@ -23,6 +24,9 @@ function App() {
                 </Route>
                 <Route path="/collections/:id?">
                     <ProductPage />
+                </Route>
+                <Route path="/material">
+                    <MaterialPage />
                 </Route>
             </Switch>
             <Footer />

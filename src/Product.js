@@ -16,12 +16,15 @@ const ProductCard = ({ images, name, minPrice, onDiscoverClick }) => {
                 height: '28em'
             }}
         >
-            <div className="overflow-hidden" style={{ height: '80%' }}>
+            <div
+                className="overflow-hidden rounded-t-md"
+                style={{ height: '80%' }}
+            >
                 <animated.img
                     onMouseEnter={() => setImgHovered(true)}
                     onMouseLeave={() => setImgHovered(false)}
                     src={images[0]}
-                    className="w-full h-full object-cover object-center rounded-t-md"
+                    className="w-full h-full object-cover object-center"
                     style={zooming}
                 />
             </div>

@@ -7,7 +7,7 @@ const Header = () => {
     const links = [
         { label: 'ACCUEIL', to: '/' },
         { label: 'COLLECTIONS', to: '/collections' },
-        { label: 'MATIERES', to: '/materials' },
+        { label: 'MATIERES', to: '/material' },
         { label: 'CREATEUR', to: '/creator' }
     ]
 
