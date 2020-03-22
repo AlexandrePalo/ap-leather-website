@@ -14,7 +14,11 @@ const ProductPage = ({ history }) => {
     return (
         <div className="p-6" style={{ backgroundColor: '#262b2c' }}>
             {detailed ? (
-                <Product {...products.find(p => p.id === detailed)} detailed />
+                <Product
+                    {...products.find(p => p.id === detailed)}
+                    detailed
+                    undetail={() => history.push('/collections')}
+                />
             ) : null}
             <ProductList
                 products={products.filter(p => p.id !== detailed)}

@@ -11,12 +11,6 @@ const Header = () => {
         { label: 'CREATEUR', to: '/creator' }
     ]
 
-    const [hovered, setHovered] = useState(false)
-
-    const lineDisplaying = useSpring({
-        opacity: hovered ? 1 : 0
-    })
-
     const route = useLocation()
     const isHomeRoute = route.pathname === '/'
 
@@ -28,8 +22,6 @@ const Header = () => {
             style={{
                 backgroundColor: `${!isHomeRoute ? '#262b2c' : ''}`
             }}
-            onMouseEnter={() => setHovered(true)}
-            onMouseLeave={() => setHovered(false)}
         >
             <div className="h-full p-2">
                 <img
@@ -39,26 +31,30 @@ const Header = () => {
                     alt="AP Leather logo"
                 />
                 <div
-                    className="flex flex-row justify-around max-w-md mx-auto mt-4"
+                    className="flex flex-row justify-around max-w-xl mx-auto mt-4"
                     style={{ zIndex: 'inherit' }}
                 >
                     {links.map((l, i) => (
-                        <Link key={`header-link-${i}`} to={l.to}>
+                        <Link
+                            key={`header-link-${i}`}
+                            to={l.to}
+                            active={l.to === route.pathname}
+                        >
                             {l.label}
                         </Link>
                     ))}
                 </div>
             </div>
-            <animated.div className="h-px bg-white" style={lineDisplaying} />
+            <div className="h-px bg-white" />
         </header>
     )
 }
 
-const Link = ({ to, children }) => {
+const Link = ({ to, active, children }) => {
     const [hovered, setHovered] = useState(false)
 
     const lineFading = useSpring({
-        opacity: hovered ? 1 : 0
+        opacity: hovered || active ? 1 : 0
     })
 
     return (
