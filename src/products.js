@@ -84,5 +84,41 @@ export default [
             },
             { name: 'Fil lin blanc', hex: '#ffffff' }
         ]
+    },
+    {
+        id: 5,
+        name: 'ETUI STYLO',
+        minPrice: 10,
+        images: [cards1, cards2],
+        descriptions: [
+            'Léger et minimaliste, idéal pour une poche de pantalon ou un petit sac à main.',
+            'Permets de garder à porté de main 6 cartes et quelques billets dans la poche centrale.',
+            '6 poches "cartes" et une poche centrale.'
+        ],
+        colors: [
+            {
+                name: 'Naturel',
+                hex: '#edc7b8'
+            },
+            { name: 'Fil lin blanc', hex: '#ffffff' }
+        ]
+    },
+    {
+        id: 6,
+        name: 'PORTE BADGE',
+        minPrice: 10,
+        images: [cards1, cards2],
+        descriptions: [
+            'Léger et minimaliste, idéal pour une poche de pantalon ou un petit sac à main.',
+            'Permets de garder à porté de main 6 cartes et quelques billets dans la poche centrale.',
+            '6 poches "cartes" et une poche centrale.'
+        ],
+        colors: [
+            {
+                name: 'Naturel',
+                hex: '#edc7b8'
+            },
+            { name: 'Fil lin blanc', hex: '#ffffff' }
+        ]
     }
 ]

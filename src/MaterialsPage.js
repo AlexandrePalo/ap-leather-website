@@ -5,7 +5,7 @@ import coutureSellier from './media/couture_sellier.jpg'
 
 const MaterialPage = () => {
     return (
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto px-6">
             <Material title="Cuir" img={butteroLeather}>
                 <p className="text-base text-primary mt-6">
                     Le cuir utilisé provient du nord de l'Italie, reconnu pour
@@ -26,24 +26,24 @@ const MaterialPage = () => {
                     être teints lors du processus de tannage, pour avoir par
                     exemple les couleurs suivantes :
                 </p>
-                <div className="mt-4 flex flex-row">
-                    <span className="text-sm flex flex-row items-center text-primary-lighter">
+                <div className="mt-4 flex flex-row flex-wrap">
+                    <span className="text-sm flex flex-row items-center text-primary-lighter mr-4">
                         <span
                             className="rounded-full h-4 w-4 mr-1 inline-block"
                             style={{ backgroundColor: '#edc7b8' }}
                         />
                         Beige naturel (non teint)
                     </span>
-                    <span className="text-sm flex flex-row items-center text-primary-lighter ml-4">
+                    <span className="text-sm flex flex-row items-center text-primary-lighter mr-4">
                         <span
-                            className="rounded-full h-4 w-4 ml-1 mr-1 inline-block"
+                            className="rounded-full h-4 w-4 mr-1 inline-block"
                             style={{ backgroundColor: '#732812' }}
                         />
                         Brun cognac
                     </span>
-                    <span className="text-sm flex flex-row items-center text-primary-lighter ml-4">
+                    <span className="text-sm flex flex-row items-center text-primary-lighter mr-4">
                         <span
-                            className="rounded-full h-4 w-4 ml-1 mr-1 inline-block"
+                            className="rounded-full h-4 w-4 mr-1 inline-block"
                             style={{ backgroundColor: '#0D231A' }}
                         />
                         Vert agave
@@ -63,7 +63,7 @@ const MaterialPage = () => {
                     couture du cuir. Il peut être teinté, mais nous utilisons
                     quasiment exclusivement du lin blanc pour son naturel.
                 </p>
-                <span className="mt-4 text-sm flex flex-row items-center text-primary-lighter">
+                <span className="mt-4 text-sm flex flex-row flex-wrap items-center text-primary-lighter">
                     <span
                         className="rounded-full h-4 w-4 mr-1 inline-block border border-solid border-primary-lighter border-px"
                         style={{ backgroundColor: '#ffffff' }}
@@ -92,8 +92,8 @@ const MaterialPage = () => {
 
 const Material = ({ title, img, children }) => {
     return (
-        <div className="flex flex-row my-10">
-            <div className="w-2/3 mr-8">
+        <div className="flex flex-col sm:flex-row flex-start my-10">
+            <div className="sm:w-2/3 sm:mr-8">
                 <div className="relative w-full">
                     <span className="font-bold text-2xl text-secondary">
                         {title}
@@ -102,7 +102,7 @@ const Material = ({ title, img, children }) => {
                 </div>
                 {children}
             </div>
-            <div className="w-2/3 pt-10">
+            <div className="sm:w-2/3 sm:pt-10 pt-4">
                 <img
                     src={img}
                     className="object-cover object-center w-full h-full rounded-sm"

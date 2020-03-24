@@ -4106,6 +4106,14 @@ video {
   height: 100vh;
 }
 
+.h-28em {
+  height: 28em;
+}
+
+.h-i {
+  height: initial;
+}
+
 .leading-3 {
   line-height: .75rem;
 }
@@ -5404,6 +5412,10 @@ video {
 
 .min-h-screen {
   min-height: 100vh;
+}
+
+.min-h-28em {
+  min-height: 28em;
 }
 
 .min-w-0 {
@@ -11262,6 +11274,10 @@ video {
 
 .w-screen {
   width: 100vw;
+}
+
+.w-20em {
+  width: 20em;
 }
 
 .z-0 {
@@ -17275,6 +17291,14 @@ code {
     height: 100vh;
   }
 
+  .sm\:h-28em {
+    height: 28em;
+  }
+
+  .sm\:h-i {
+    height: initial;
+  }
+
   .sm\:leading-3 {
     line-height: .75rem;
   }
@@ -18573,6 +18597,10 @@ code {
 
   .sm\:min-h-screen {
     min-height: 100vh;
+  }
+
+  .sm\:min-h-28em {
+    min-height: 28em;
   }
 
   .sm\:min-w-0 {
@@ -24431,6 +24459,10 @@ code {
 
   .sm\:w-screen {
     width: 100vw;
+  }
+
+  .sm\:w-20em {
+    width: 20em;
   }
 
   .sm\:z-0 {
@@ -30393,6 +30425,14 @@ code {
     height: 100vh;
   }
 
+  .md\:h-28em {
+    height: 28em;
+  }
+
+  .md\:h-i {
+    height: initial;
+  }
+
   .md\:leading-3 {
     line-height: .75rem;
   }
@@ -31691,6 +31731,10 @@ code {
 
   .md\:min-h-screen {
     min-height: 100vh;
+  }
+
+  .md\:min-h-28em {
+    min-height: 28em;
   }
 
   .md\:min-w-0 {
@@ -37549,6 +37593,10 @@ code {
 
   .md\:w-screen {
     width: 100vw;
+  }
+
+  .md\:w-20em {
+    width: 20em;
   }
 
   .md\:z-0 {
@@ -43511,6 +43559,14 @@ code {
     height: 100vh;
   }
 
+  .lg\:h-28em {
+    height: 28em;
+  }
+
+  .lg\:h-i {
+    height: initial;
+  }
+
   .lg\:leading-3 {
     line-height: .75rem;
   }
@@ -44809,6 +44865,10 @@ code {
 
   .lg\:min-h-screen {
     min-height: 100vh;
+  }
+
+  .lg\:min-h-28em {
+    min-height: 28em;
   }
 
   .lg\:min-w-0 {
@@ -50667,6 +50727,10 @@ code {
 
   .lg\:w-screen {
     width: 100vw;
+  }
+
+  .lg\:w-20em {
+    width: 20em;
   }
 
   .lg\:z-0 {
@@ -56629,6 +56693,14 @@ code {
     height: 100vh;
   }
 
+  .xl\:h-28em {
+    height: 28em;
+  }
+
+  .xl\:h-i {
+    height: initial;
+  }
+
   .xl\:leading-3 {
     line-height: .75rem;
   }
@@ -57927,6 +57999,10 @@ code {
 
   .xl\:min-h-screen {
     min-height: 100vh;
+  }
+
+  .xl\:min-h-28em {
+    min-height: 28em;
   }
 
   .xl\:min-w-0 {
@@ -63785,6 +63861,10 @@ code {
 
   .xl\:w-screen {
     width: 100vw;
+  }
+
+  .xl\:w-20em {
+    width: 20em;
   }
 
   .xl\:z-0 {

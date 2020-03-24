@@ -8,13 +8,7 @@ const ProductCard = ({ images, name, minPrice, onDiscoverClick }) => {
     })
 
     return (
-        <div
-            className="rounded-md flex flex-col justify-between bg-primary-very-lighter m-3"
-            style={{
-                width: '19em',
-                height: '28em'
-            }}
-        >
+        <div className="rounded-md flex flex-col justify-between bg-primary-very-lighter m-3 w-20em h-28em">
             <div
                 className="overflow-hidden rounded-t-md"
                 style={{ height: '80%' }}
@@ -28,7 +22,7 @@ const ProductCard = ({ images, name, minPrice, onDiscoverClick }) => {
                 />
             </div>
             <div className="flex flex-row p-4 items-center justify-between">
-                <div className="flex flex-col">
+                <div className="flex flex-col mr-4">
                     <span className="text-secondary font-bold text-sm">
                         {name}
                     </span>
@@ -57,14 +51,9 @@ const ProductDetailed = ({
     })
 
     return (
-        <div
-            className="rounded-md flex flex-row justify-between max-w-screen-lg mx-auto bg-primary-very-lighter mb-8"
-            style={{
-                height: '28em'
-            }}
-        >
-            <div className="flex flex-col p-4 items-start justify-between w-5/12">
-                <div className="w-full relative">
+        <div className="rounded-md flex flex-col sm:flex-row justify-between max-w-screen-lg mx-auto bg-primary-very-lighter mb-8">
+            <div className="flex flex-col p-4 sm:w-5/12">
+                <div className="w-full relative mb-4">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
@@ -97,7 +86,7 @@ const ProductDetailed = ({
                         </p>
                     ))}
                 </div>
-                <div className="flex flex-col">
+                <div className="flex flex-col mt-4">
                     <span className="text-sm font-bold text-primary-darker">
                         QUALITE
                     </span>
@@ -123,18 +112,24 @@ const ProductDetailed = ({
                         ))}
                     </div>
                 </div>
-                <div className="flex flex-row items-center">
+                <div className="sm:flex flex-row items-center hidden mt-4">
                     <ButtonLink
                         label="COMMANDER"
                         link="https://www.etsy.com/fr/"
                     />
-                    <span className="text-primary-lighter ml-4">
+                    <span className="text-primary-lighter ml-4 text-sm">
                         A PARTIR DE {minPrice}€
                     </span>
                 </div>
             </div>
-            <div className="w-7/12 h-full p-l-2">
+            <div className="h-64 sm:w-7/12 sm:h-i">
                 <Images images={images} />
+            </div>
+            <div className="flex flex-row items-center sm:hidden p-4 text-sm">
+                <ButtonLink label="COMMANDER" link="https://www.etsy.com/fr/" />
+                <span className="text-primary-lighter ml-4">
+                    A PARTIR DE {minPrice}€
+                </span>
             </div>
         </div>
     )
@@ -202,7 +197,7 @@ const Images = ({ images }) => {
             </div>
             <img
                 src={images[displayed]}
-                className="h-full w-full object-cover object-center rounded-r-md"
+                className="h-full w-full object-cover object-center sm:rounded-r-md"
                 alt={`product n°${displayed + 1}`}
             />
         </div>

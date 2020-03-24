@@ -13,6 +13,16 @@ module.exports = {
                     default: 'hsl(155, 40%, 20%)',
                     lighter: 'hsl(155, 35%, 30%)'
                 }
+            },
+            minHeight: {
+                '28em': '28em'
+            },
+            height: {
+                '28em': '28em',
+                i: 'initial'
+            },
+            width: {
+                '20em': '20em'
             }
         }
     },

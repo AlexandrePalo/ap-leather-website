@@ -23,7 +23,7 @@ const Header = () => {
                 backgroundColor: `${!isHomeRoute ? '#262b2c' : ''}`
             }}
         >
-            <div className="h-full p-2">
+            <div className="h-full py-2 px-6">
                 <img
                     src={logoWhite}
                     className="h-24 w-auto mx-auto"
@@ -31,7 +31,7 @@ const Header = () => {
                     alt="AP Leather logo"
                 />
                 <div
-                    className="flex flex-row justify-around max-w-xl mx-auto mt-4"
+                    className="flex flex-row justify-between sm:justify-around max-w-xl mx-auto mt-4"
                     style={{ zIndex: 'inherit' }}
                 >
                     {links.map((l, i) => (
@@ -59,7 +59,7 @@ const Link = ({ to, active, children }) => {
 
     return (
         <LinkRouter
-            className="mx-3 relative cursor-pointer text-white"
+            className="mx-1 text-sm sm:text-base sm:mx-3 relative cursor-pointer text-white"
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
             style={{ zIndex: 'inherit' }}

@@ -16,10 +16,11 @@ const HomePage = props => {
         <div className="pb-8">
             <div className="w-screen -mt-40 mb-8" style={{ zIndex: -1 }}>
                 <div
-                    className="relative overflow-hidden"
+                    className="h-full relative overflow-hidden"
                     style={{
                         paddingBottom: '50%',
-                        zIndex: 'inherit'
+                        zIndex: 'inherit',
+                        minHeight: 700
                     }}
                 >
                     <animated.img

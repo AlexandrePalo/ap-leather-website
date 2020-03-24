@@ -12,7 +12,7 @@ const ProductPage = ({ history }) => {
     }, [detailed])
 
     return (
-        <div className="py-8" style={{ backgroundColor: '#262b2c' }}>
+        <div className="py-8 px-6" style={{ backgroundColor: '#262b2c' }}>
             {detailed ? (
                 <Product
                     {...products.find(p => p.id === detailed)}
