@@ -59,7 +59,7 @@ const Link = ({ to, active, children }) => {
 
     return (
         <LinkRouter
-            className="mx-1 text-sm sm:text-base sm:mx-3 relative cursor-pointer text-white"
+            className="mx-1 text-sm sm:text-base sm:mx-3 relative cursor-pointer text-white font-bold"
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
             style={{ zIndex: 'inherit' }}
