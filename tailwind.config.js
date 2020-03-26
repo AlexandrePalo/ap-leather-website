@@ -19,7 +19,9 @@ module.exports = {
             },
             height: {
                 '28em': '28em',
-                i: 'initial'
+                i: 'initial',
+                76: '18rem',
+                88: '20rem'
             },
             width: {
                 '20em': '20em'

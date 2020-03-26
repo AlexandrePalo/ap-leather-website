@@ -1,5 +1,8 @@
-import React, { useState } from 'react'
-import { useSpring, animated } from 'react-spring'
+import React, { Fragment, useState, useLayoutEffect, useRef } from 'react'
+import useDimensions from 'react-use-dimensions'
+import { useSpring, useSprings, animated } from 'react-spring'
+import { useDrag } from 'react-use-gesture'
+import clamp from 'lodash-es/clamp'
 
 const ProductCard = ({ images, name, minPrice, onDiscoverClick }) => {
     const [imgHovered, setImgHovered] = useState(false)
@@ -49,6 +52,7 @@ const ProductDetailed = ({
     const fading = useSpring({
         color: closeHovered ? 'hsl(155, 40%, 20%)' : 'hsl(190, 3%, 40%)'
     })
+    const [ref, { width }] = useDimensions()
 
     return (
         <div className="rounded-md flex flex-col sm:flex-row justify-between max-w-screen-lg mx-auto bg-primary-very-lighter mb-8">
@@ -122,8 +126,11 @@ const ProductDetailed = ({
                     </span>
                 </div>
             </div>
-            <div className="h-64 sm:w-7/12 sm:h-i">
-                <Images images={images} />
+            <div
+                className="h-88 sm:w-7/12 sm:h-i overflow-hidden relative sm:rounded-r-md"
+                ref={ref}
+            >
+                {width && <Images images={images} width={width} />}
             </div>
             <div className="flex flex-row items-center sm:hidden p-4 text-sm">
                 <ButtonLink label="COMMANDER" link="https://www.etsy.com/fr/" />
@@ -180,26 +187,65 @@ const ButtonLink = ({ label, onClick, link, small = false }) => {
     )
 }
 
-const Images = ({ images }) => {
-    const [displayed, setDisplayed] = useState(0)
+const Images = ({ images, width }) => {
+    const V_THRESHOLD = 0.3
+
+    const [xPos, setXPos] = useState(0)
+    const [springs, set] = useSprings(images.length, i => ({
+        transform: `translate(${i * width}px)`
+    }))
+
+    // Hook to reset xPos if images props is changed (ie product changed)
+    const imagesRef = useRef(images)
+    if (JSON.stringify(imagesRef.current) !== JSON.stringify(images)) {
+        imagesRef.current = images
+        setXPos(xp => 0)
+    }
+
+    const bind = useDrag(({ last, vxvy: [vx, vy] }) => {
+        if (last) {
+            // swipe left
+            if (vx < -V_THRESHOLD && -xPos < images.length - 1) {
+                setXPos(xp => xp - 1)
+            }
+            // swipe right
+            else if (vx > V_THRESHOLD && xPos < 0) {
+                setXPos(xp => xp + 1)
+            }
+        }
+    })
+    set(i => ({
+        transform: `translate(${(i + xPos) * width}px)`
+    }))
 
     return (
-        <div className="relative h-full w-full">
-            <div className="absolute top-0 right-0 flex flex-col">
+        <div>
+            <div className="absolute top-0 right-0 flex flex-col z-10">
                 {images.map((img, i) => (
                     <Circle
-                        key={`image-${i}`}
+                        key={`product-detailed-image-circle-${i}`}
                         className="h-4 w-4 m-2 rounded-full border border-solid border-secondary"
-                        onClick={() => setDisplayed(i)}
-                        displayed={i === displayed}
+                        displayed={i === -xPos}
+                        onClick={() => setXPos(xp => -i)}
                     />
                 ))}
             </div>
-            <img
-                src={images[displayed]}
-                className="h-full w-full object-cover object-center sm:rounded-r-md"
-                alt={`product n°${displayed + 1}`}
-            />
+            {springs.map((props, i) => (
+                <animated.div
+                    {...bind()}
+                    style={{ ...props, willChange: 'transform' }}
+                    className="absolute h-full w-full"
+                    key={`product-detailed-image-${i}`}
+                >
+                    <animated.div
+                        style={{
+                            backgroundImage: `url(${images[i]})`,
+                            willChange: 'transform'
+                        }}
+                        className="h-full w-full bg-cover bg-center"
+                    />
+                </animated.div>
+            ))}
         </div>
     )
 }
