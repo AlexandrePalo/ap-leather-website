@@ -259,6 +259,11 @@ const Circle = ({ displayed, ...rest }) => {
             ? 'hsl(155, 40%, 20%)'
             : '#ffffff' // secondary default
     })
+    const displayedRef = useRef(displayed)
+    if (displayed !== displayedRef.current) {
+        setHovered(false)
+        displayedRef.current = displayed
+    }
     return (
         <animated.div
             style={emphasing}
