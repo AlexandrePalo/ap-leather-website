@@ -224,7 +224,7 @@ const Images = ({ images, width }) => {
                 {images.map((img, i) => (
                     <Circle
                         key={`product-detailed-image-circle-${i}`}
-                        className="h-4 w-4 m-2 rounded-full border border-solid border-secondary"
+                        className="h-3 w-3 m-2 rounded-full border border-solid border-secondary"
                         displayed={i === -xPos}
                         onClick={() => setXPos(xp => -i)}
                     />
