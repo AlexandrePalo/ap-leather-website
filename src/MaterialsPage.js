@@ -48,6 +48,20 @@ const MaterialPage = () => {
                         />
                         Vert agave
                     </span>
+                    <span className="text-sm flex flex-row items-center text-primary-lighter mr-4">
+                        <span
+                            className="rounded-full h-4 w-4 mr-1 inline-block"
+                            style={{ backgroundColor: '#712C32' }}
+                        />
+                        Rouge pourpre
+                    </span>
+                    <span className="text-sm flex flex-row items-center text-primary-lighter mr-4">
+                        <span
+                            className="rounded-full h-4 w-4 mr-1 inline-block"
+                            style={{ backgroundColor: '#ED9753' }}
+                        />
+                        Brun ocre
+                    </span>
                 </div>
                 <p className="text-sm text-primary-lighter mt-2">
                     D'autres couleurs sont disponibles à la demande.
