@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useLayoutEffect, useRef } from 'react'
+import React, { useState, useRef } from 'react'
 import useDimensions from 'react-use-dimensions'
 import { useSpring, useSprings, animated } from 'react-spring'
 import { useDrag } from 'react-use-gesture'

@@ -30,7 +30,7 @@ const Footer = () => {
     return (
         <footer>
             <div className="h-px bg-primary-lighter" />
-            <div className="px-6 flex flex-col md:flex-row py-8 items-start md:justify-between">
+            <div className="px-6 flex flex-col md:flex-row py-8 items-start md:justify-between sm:max-w-5xl sm:mx-auto">
                 <div className="min-w-full md:min-w-0 w-1/3 my-3">
                     <span className="font-bold text-base text-secondary">
                         A PROPOS
@@ -42,6 +42,10 @@ const Footer = () => {
                     <p className="text-justify text-sm mt-1">
                         L'objectif est de créer des produits en cuir élégants,
                         modernes et durables pour des objets de tous les jours.
+                    </p>
+                    <p className="text-justify text-xs mt-1 italic">
+                        L'ensemble de ce site web, descriptions et photos sont
+                        la propriété exclusive d'Alexandre PALO.
                     </p>
                 </div>
                 <div className="min-w-full md:min-w-0 my-3">
@@ -70,7 +74,11 @@ const Footer = () => {
                     <p className="text-justify text-sm mt-1 mb-1">
                         Indiquez moi aussi vos souhaits d'objets futurs !
                     </p>
-                    <ButtonLink small label="ME CONTACTER" />
+                    <ButtonLink
+                        small
+                        label="ME CONTACTER"
+                        link="mailto:alexandre.palo.leather@gmail.com"
+                    />
                 </div>
             </div>
         </footer>

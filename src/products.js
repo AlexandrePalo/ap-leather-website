@@ -80,7 +80,7 @@ export default [
         id: 4,
         name: 'PORTE 6 CARTES',
         minPrice: 30,
-        images: [c6ards1, c6ards2],
+        images: [c6ards1, c6ards2, c6ards3],
         descriptions: [
             'Léger et minimaliste, idéal pour une poche de pantalon ou un petit sac à main.',
             'Permets de garder à porté de main 6 cartes (3 de chaque côté) et quelques billets dans la poche centrale.',

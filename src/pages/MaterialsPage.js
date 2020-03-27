@@ -1,12 +1,12 @@
 import React from 'react'
-import butteroLeather from './media/buttero_leather.jpg'
-import filChinois from './media/fil_chinois.jpg'
-import coutureSellier from './media/couture_sellier.jpg'
+import butteroLeather from '../media/buttero_leather.jpg'
+import filChinois from '../media/fil_chinois.jpg'
+import coutureSellier from '../media/couture_sellier.jpg'
 
 const MaterialPage = () => {
     return (
         <div className="max-w-4xl mx-auto px-6">
-            <Material title="Cuir" img={butteroLeather}>
+            <Material title="Cuir" img={butteroLeather} imgAlt="cuir Buttero">
                 <p className="text-base text-primary mt-6">
                     Le cuir utilisé provient du nord de l'Italie, reconnu pour
                     son savoir faire. Il est tanné en utilisant des tanins
@@ -67,7 +67,7 @@ const MaterialPage = () => {
                     D'autres couleurs sont disponibles à la demande.
                 </p>
             </Material>
-            <Material title="Fil" img={filChinois}>
+            <Material title="Fil" img={filChinois} imgAlt="fil au chinois">
                 <p className="text-base text-primary mt-6">
                     Seul du <span className="font-bold">fil de lin</span> est
                     utilisé, de préférence fabriqué en France.
@@ -88,7 +88,11 @@ const MaterialPage = () => {
                     D'autres couleurs sont disponibles à la demande.
                 </p>
             </Material>
-            <Material title="Couture" img={coutureSellier}>
+            <Material
+                title="Couture"
+                img={coutureSellier}
+                imgAlt="couture point sellier"
+            >
                 <p className="text-base text-primary mt-6">
                     Tous les objets sont{' '}
                     <span className="font-bold">cousus à la main</span>, selon
@@ -104,7 +108,7 @@ const MaterialPage = () => {
     )
 }
 
-const Material = ({ title, img, children }) => {
+const Material = ({ title, img, imgAlt, children }) => {
     return (
         <div className="flex flex-col sm:flex-row flex-start my-10">
             <div className="sm:w-2/3 sm:mr-8">
@@ -119,6 +123,7 @@ const Material = ({ title, img, children }) => {
             <div className="sm:w-2/3 sm:pt-10 pt-4">
                 <img
                     src={img}
+                    alt={imgAlt}
                     className="object-cover object-center w-full h-full rounded-sm"
                     style={{ maxHeight: 400 }}
                 />

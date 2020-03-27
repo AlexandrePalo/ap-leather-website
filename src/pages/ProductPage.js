@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useParams, withRouter } from 'react-router-dom'
-import Product from './Product'
-import products from './products'
+import Product from '../components/Product'
+import products from '../products'
 
 const ProductPage = ({ history }) => {
     let { id: detailed } = useParams()

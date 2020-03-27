@@ -1,8 +1,8 @@
 import React from 'react'
 import { withRouter } from 'react-router-dom'
 import { useSpring, animated } from 'react-spring'
-import products from './products'
-import bgImg from './media/leather_bg_4.jpg'
+import products from '../products'
+import bgImg from '../media/leather_bg_4.jpg'
 import { ProductList } from './ProductPage'
 
 const HomePage = props => {

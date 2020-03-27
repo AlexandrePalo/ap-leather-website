@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useSpring, animated } from 'react-spring'
 import { Link as LinkRouter, useLocation } from 'react-router-dom'
-import logoWhite from './media/logo-white.png'
+import logoWhite from '../media/logo-white.png'
 
 const Header = () => {
     const links = [
