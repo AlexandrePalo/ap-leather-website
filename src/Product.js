@@ -2,7 +2,6 @@ import React, { Fragment, useState, useLayoutEffect, useRef } from 'react'
 import useDimensions from 'react-use-dimensions'
 import { useSpring, useSprings, animated } from 'react-spring'
 import { useDrag } from 'react-use-gesture'
-import clamp from 'lodash-es/clamp'
 
 const ProductCard = ({ images, name, minPrice, onDiscoverClick }) => {
     const [imgHovered, setImgHovered] = useState(false)
@@ -15,6 +14,7 @@ const ProductCard = ({ images, name, minPrice, onDiscoverClick }) => {
             <div
                 className="overflow-hidden rounded-t-md"
                 style={{ height: '80%' }}
+                onClick={onDiscoverClick}
             >
                 <animated.img
                     onMouseEnter={() => setImgHovered(true)}
