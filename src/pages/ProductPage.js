@@ -17,13 +17,13 @@ const ProductPage = ({ history }) => {
                 <Product
                     {...products.find(p => p.id === detailed)}
                     detailed
-                    undetail={() => history.push('/collections')}
+                    undetail={() => history.push('/creations')}
                 />
             ) : null}
             <ProductList
                 products={products.filter(p => p.id !== detailed)}
                 onDiscoverClick={id => {
-                    history.push(`/collections/${id}`)
+                    history.push(`/creations/${id}`)
                 }}
             />
         </div>

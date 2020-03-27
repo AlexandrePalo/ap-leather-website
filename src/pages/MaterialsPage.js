@@ -9,10 +9,10 @@ const MaterialPage = () => {
             <Material title="Cuir" img={butteroLeather} imgAlt="cuir Buttero">
                 <p className="text-base text-primary mt-6">
                     Le cuir utilisé provient du nord de l'Italie, reconnu pour
-                    son savoir faire. Il est tanné en utilisant des tanins
-                    naturels : le "tannage végétal". Ce tannage profère au cuir
-                    une grande qualité, un touché, une couleur et une odeur
-                    caractéristiques.
+                    son savoir-faire. Il est tanné en utilisant des tanins
+                    naturels : ce procédé est appelé le "tannage végétal". Ce
+                    tannage profère au cuir une grande qualité, un touché et une
+                    couleur caractéristiques.
                 </p>
                 <p className="text-base text-primary mt-4">
                     Selon la disponibilté, les cuirs sont issus des tanneries{' '}
@@ -20,11 +20,12 @@ const MaterialPage = () => {
                     <span className="font-bold">Tempesti</span>, en Italie.
                 </p>
                 <p className="text-base text-primary mt-4">
-                    Evidemment, tous les cuirs sont{' '}
-                    <span className="font-bold">véritables</span>, de{' '}
-                    <span className="font-bold">vachettes</span>. Ils peuvent
-                    être teints lors du processus de tannage, pour avoir par
-                    exemple les couleurs suivantes :
+                    Evidemment, tous les cuirs sont de{' '}
+                    <span className="font-bold">
+                        véritables cuirs de vachette
+                    </span>
+                    . Ils peuvent être teints lors du processus de tannage, pour
+                    obtenir par exemple les couleurs suivantes :
                 </p>
                 <div className="mt-4 flex flex-row flex-wrap">
                     <span className="text-sm flex flex-row items-center text-primary-lighter mr-4">
@@ -73,9 +74,9 @@ const MaterialPage = () => {
                     utilisé, de préférence fabriqué en France.
                 </p>
                 <p className="text-base text-primary mt-6">
-                    Le lin est très résistant et est de premier choix pour la
-                    couture du cuir. Il peut être teinté, mais nous utilisons
-                    quasiment exclusivement du lin blanc pour son naturel.
+                    Le lin, très résistant, est de premier choix pour la couture
+                    du cuir. Il peut être teinté, mais nous utilisons quasiment
+                    exclusivement du lin blanc pour son naturel.
                 </p>
                 <span className="mt-4 text-sm flex flex-row flex-wrap items-center text-primary-lighter">
                     <span
@@ -99,9 +100,9 @@ const MaterialPage = () => {
                     le <span className="font-bold">point sellier</span>.
                 </p>
                 <p className="text-base text-primary mt-6">
-                    Ce point est très résistant et durable dans le temps. Il
-                    donne un estéthique particulier à la couture et est idéal
-                    pour tous les objets en cuir.
+                    Ce point est très résistant et durable dans le temps. Il est
+                    idéal pour tous les objets en cuir et donne un aspect
+                    esthétique à la couture.
                 </p>
             </Material>
         </div>

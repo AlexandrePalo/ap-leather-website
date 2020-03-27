@@ -6,9 +6,9 @@ import logoWhite from '../media/logo-white.png'
 const Header = () => {
     const links = [
         { label: 'ACCUEIL', to: '/' },
-        { label: 'COLLECTIONS', to: '/collections' },
-        { label: 'MATIERES', to: '/material' },
-        { label: 'CREATEUR', to: '/creator' }
+        { label: 'CREATIONS', to: '/creations' },
+        { label: 'MATERIAUX', to: '/material' },
+        { label: 'LA MARQUE', to: '/brand' }
     ]
 
     const route = useLocation()

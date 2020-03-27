@@ -18,7 +18,7 @@ import badge3 from './media/badge_3.jpg'
 export default [
     {
         id: 1,
-        name: 'POCHETTE ZIP S & M',
+        name: 'POCHETTE ZIP S & L',
         minPrice: 20,
         images: [pouch1, pouch2, pouch3],
         descriptions: [
@@ -78,7 +78,7 @@ export default [
     },
     {
         id: 4,
-        name: 'PORTE 6 CARTES',
+        name: 'PORTE CARTES',
         minPrice: 30,
         images: [c6ards1, c6ards2, c6ards3],
         descriptions: [
@@ -112,12 +112,12 @@ export default [
     },
     {
         id: 6,
-        name: 'PORTE BADGE',
+        name: 'PORTE-BADGE',
         minPrice: 10,
         images: [badge1, badge2, badge3],
         descriptions: [
             "Garder votre badge d'entreprise avec style, dans un étui élégant en cuir.",
-            "L'accès sans contact fonctionne également à travers le porte badge.",
+            "L'accès sans contact fonctionne également à travers le porte-badge.",
             'Adapté pour une carte environ 86x56 mm (CB).'
         ],
         colors: [

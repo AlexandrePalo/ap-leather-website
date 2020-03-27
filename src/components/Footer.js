@@ -36,12 +36,13 @@ const Footer = () => {
                         A PROPOS
                     </span>
                     <p className="text-justify text-sm mt-1">
-                        <span className="font-bold">AP Leather</span> est créé,
-                        développé et produit à Paris, en France.
+                        Les articles de la marque{' '}
+                        <span className="font-bold">AP Leather</span> sont
+                        confectionnés, à la main, à Paris, en France.
                     </p>
                     <p className="text-justify text-sm mt-1">
-                        L'objectif est de créer des produits en cuir élégants,
-                        modernes et durables pour des objets de tous les jours.
+                        Ces accessoires en cuir élégants, modernes et durables
+                        vont accompagneront tous les jours.
                     </p>
                     <p className="text-justify text-xs mt-1 italic">
                         L'ensemble de ce site web, descriptions et photos sont
@@ -67,12 +68,13 @@ const Footer = () => {
                         CONTACT
                     </span>
                     <p className="text-justify text-sm mt-1">
-                        N'hésitez pas à me contacter pour toutes vos questions.
-                        Je peux fabriquer des produits à la demande pour une
-                        couleur spécifique par exemple.
+                        Contactez-moi pour toutes vos questions. Je peux
+                        fabriquer des produits à la demande (couleur, taille,
+                        modèle, ...).
                     </p>
                     <p className="text-justify text-sm mt-1 mb-1">
-                        Indiquez moi aussi vos souhaits d'objets futurs !
+                        N'hésitez pas à m'envoyez vous suggestions pour agrandir
+                        la collection !
                     </p>
                     <ButtonLink
                         small

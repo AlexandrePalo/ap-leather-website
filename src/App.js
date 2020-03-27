@@ -6,7 +6,7 @@ import Footer from './components/Footer'
 import HomePage from './pages/HomePage'
 import ProductPage from './pages/ProductPage'
 import MaterialPage from './pages/MaterialsPage'
-import CreatorPage from './pages/CreatorPage'
+import BrandPage from './pages/BrandPage'
 
 function App() {
     const location = useLocation()
@@ -18,14 +18,14 @@ function App() {
                 <Route path="/" exact>
                     <HomePage />
                 </Route>
-                <Route path="/collections/:id?">
+                <Route path="/creations/:id?">
                     <ProductPage />
                 </Route>
                 <Route path="/material">
                     <MaterialPage />
                 </Route>
-                <Route path="/creator">
-                    <CreatorPage />
+                <Route path="/brand">
+                    <BrandPage />
                 </Route>
             </Switch>
             <Footer />
