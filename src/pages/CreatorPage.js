@@ -3,15 +3,15 @@ import creator from '../media/creator.jpg'
 
 const CreatorPage = () => {
     return (
-        <div className="my-10">
+        <div className="my-10 px-6">
             <div className="flex flex-row items-center justify-start max-w-sm mx-auto mb-10">
                 <div
                     className="rounded-full h-32 w-32 flex-shrink-0 bg-cover bg-center border-2 border-secondary mr-8"
                     style={{ backgroundImage: `url(${creator})` }}
                 />
-                <p className="text-base text-primary">
+                <p className="text-base text-primary-lighter font-bold">
                     Ingénieur de formation, je suis avant tout{' '}
-                    <span className="text-secondary font-bold">créateur</span>.
+                    <span className="text-secondary">créateur</span>.
                 </p>
             </div>
             <p className="text-base text-primary mt-6 max-w-xl mx-auto text-justify">
