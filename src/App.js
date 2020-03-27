@@ -7,12 +7,13 @@ import HomePage from './pages/HomePage'
 import ProductPage from './pages/ProductPage'
 import MaterialPage from './pages/MaterialsPage'
 import BrandPage from './pages/BrandPage'
+import { LanguageProvider } from './langs/context'
 
 function App() {
     const location = useLocation()
 
     return (
-        <div>
+        <LanguageProvider>
             <Header />
             <Switch location={location}>
                 <Route path="/" exact>
@@ -29,7 +30,7 @@ function App() {
                 </Route>
             </Switch>
             <Footer />
-        </div>
+        </LanguageProvider>
     )
 }
 

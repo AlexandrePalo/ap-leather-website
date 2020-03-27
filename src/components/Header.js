@@ -1,15 +1,14 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { useSpring, animated } from 'react-spring'
 import { Link as LinkRouter, useLocation } from 'react-router-dom'
 import logoWhite from '../media/logo-white.png'
+import LanguageContext from '../langs/context'
+import LanguageSelector from '../langs/LanguageSelector'
 
 const Header = () => {
-    const links = [
-        { label: 'ACCUEIL', to: '/' },
-        { label: 'CREATIONS', to: '/creations' },
-        { label: 'MATERIAUX', to: '/material' },
-        { label: 'LA MARQUE', to: '/brand' }
-    ]
+    const lang = useContext(LanguageContext)
+
+    const links = lang.dictionary.header.links
 
     const route = useLocation()
     const isHomeRoute = route.pathname === '/'
@@ -23,7 +22,10 @@ const Header = () => {
                 backgroundColor: `${!isHomeRoute ? '#262b2c' : ''}`
             }}
         >
-            <div className="h-full py-2 px-6">
+            <div className="h-full py-2 px-6 relative">
+                <div className="absolute top-0 right-0 p-4">
+                    <LanguageSelector />
+                </div>
                 <img
                     src={logoWhite}
                     className="h-24 w-auto mx-auto"
