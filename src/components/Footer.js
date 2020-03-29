@@ -1,8 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { animated, useSpring } from 'react-spring'
 import { ButtonLink } from './Product'
+import LanguageContext from '../langs/context'
 
 const Footer = () => {
+    const lang = useContext(LanguageContext)
+    const { about, networks, contact } = lang.dictionary.footer
     const socials = [
         {
             id: 1,
@@ -33,25 +36,20 @@ const Footer = () => {
             <div className="px-6 flex flex-col md:flex-row py-8 items-start md:justify-between sm:max-w-5xl sm:mx-auto">
                 <div className="min-w-full md:min-w-0 w-1/3 my-3">
                     <span className="font-bold text-base text-secondary">
-                        A PROPOS
+                        {about.title}
                     </span>
-                    <p className="text-justify text-sm mt-1">
-                        Les articles de la marque{' '}
-                        <span className="font-bold">AP Leather</span> sont
-                        confectionnés, à la main, à Paris, en France.
-                    </p>
-                    <p className="text-justify text-sm mt-1">
-                        Ces accessoires en cuir élégants, modernes et durables
-                        vont accompagneront tous les jours.
-                    </p>
+                    <p
+                        className="text-justify text-sm mt-1"
+                        dangerouslySetInnerHTML={{ __html: about.p1 }}
+                    ></p>
+                    <p className="text-justify text-sm mt-1">{about.p2}</p>
                     <p className="text-justify text-xs mt-1 italic">
-                        L'ensemble de ce site web, descriptions et photos sont
-                        la propriété exclusive d'Alexandre PALO.
+                        {about.p3}
                     </p>
                 </div>
                 <div className="min-w-full md:min-w-0 my-3">
                     <span className="font-bold text-base text-secondary">
-                        RESEAUX
+                        {networks.title}
                     </span>
                     <div className="flex flex-row mt-1">
                         {socials.map((s, i) => (
@@ -65,20 +63,15 @@ const Footer = () => {
                 </div>
                 <div className="min-w-full md:min-w-0 w-1/3 flex flex-col my-3">
                     <span className="font-bold text-base text-secondary">
-                        CONTACT
+                        {contact.title}
                     </span>
-                    <p className="text-justify text-sm mt-1">
-                        Contactez-moi pour toutes vos questions. Je peux
-                        fabriquer des produits à la demande (couleur, taille,
-                        modèle, ...).
-                    </p>
+                    <p className="text-justify text-sm mt-1">{contact.p1}</p>
                     <p className="text-justify text-sm mt-1 mb-1">
-                        N'hésitez pas à m'envoyez vous suggestions pour agrandir
-                        la collection !
+                        {contact.p2}
                     </p>
                     <ButtonLink
                         small
-                        label="ME CONTACTER"
+                        label={contact.buttonLabel}
                         link="mailto:alexandre.palo.leather@gmail.com"
                     />
                 </div>

@@ -7,7 +7,6 @@ import LanguageSelector from '../langs/LanguageSelector'
 
 const Header = () => {
     const lang = useContext(LanguageContext)
-
     const links = lang.dictionary.header.links
 
     const route = useLocation()

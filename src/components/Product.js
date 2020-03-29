@@ -1,9 +1,13 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useContext } from 'react'
 import useDimensions from 'react-use-dimensions'
 import { useSpring, useSprings, animated } from 'react-spring'
 import { useDrag } from 'react-use-gesture'
+import LanguageContext from '../langs/context'
 
 const ProductCard = ({ images, name, minPrice, onDiscoverClick }) => {
+    const lang = useContext(LanguageContext)
+    const { product } = lang.dictionary
+
     const [imgHovered, setImgHovered] = useState(false)
     const zooming = useSpring({
         transform: imgHovered ? 'scale(1.25)' : 'scale(1.0)'
@@ -30,10 +34,13 @@ const ProductCard = ({ images, name, minPrice, onDiscoverClick }) => {
                         {name}
                     </span>
                     <span className="text-primary-lighter text-xs">
-                        A PARTIR DE {minPrice}€
+                        {product.price} {minPrice}€
                     </span>
                 </div>
-                <ButtonLink label="DECOUVRIR" onClick={onDiscoverClick} />
+                <ButtonLink
+                    label={product.discoverButton.label}
+                    onClick={onDiscoverClick}
+                />
             </div>
         </div>
     )
@@ -48,6 +55,9 @@ const ProductDetailed = ({
     colors,
     undetail
 }) => {
+    const lang = useContext(LanguageContext)
+    const { product } = lang.dictionary
+
     const [closeHovered, setCloseHovered] = useState(false)
     const fading = useSpring({
         color: closeHovered ? 'hsl(155, 40%, 20%)' : 'hsl(190, 3%, 40%)'
@@ -92,12 +102,10 @@ const ProductDetailed = ({
                 </div>
                 <div className="flex flex-col mt-4">
                     <span className="text-sm font-bold text-primary-darker">
-                        QUALITE
+                        {product.detailed.quality.title}
                     </span>
                     <span className="text-sm mt-2 text-primary">
-                        Tous les articles sont créés à Paris avec du cuir
-                        italien de grande qualité et sont cousus intégralement à
-                        la main au fil de lin.
+                        {product.detailed.quality.p}
                     </span>
                     <div className="mt-2 flex flex-row">
                         {colors.map((c, i) => (
@@ -118,11 +126,11 @@ const ProductDetailed = ({
                 </div>
                 <div className="sm:flex flex-row items-center hidden mt-4">
                     <ButtonLink
-                        label="COMMANDER"
+                        label={product.purchaseButton.label}
                         link="https://www.etsy.com/fr/"
                     />
                     <span className="text-primary-lighter ml-4 text-sm">
-                        A PARTIR DE {minPrice}€
+                        {product.price} {minPrice}€
                     </span>
                 </div>
             </div>
@@ -133,9 +141,12 @@ const ProductDetailed = ({
                 {width && <Images images={images} width={width} />}
             </div>
             <div className="flex flex-row items-center sm:hidden p-4 text-sm">
-                <ButtonLink label="COMMANDER" link="https://www.etsy.com/fr/" />
+                <ButtonLink
+                    label={product.purchaseButton.label}
+                    link="https://www.etsy.com/fr/"
+                />
                 <span className="text-primary-lighter ml-4">
-                    A PARTIR DE {minPrice}€
+                    {product.price} {minPrice}€
                 </span>
             </div>
         </div>

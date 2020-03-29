@@ -1,9 +1,12 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useContext } from 'react'
 import { useParams, withRouter } from 'react-router-dom'
 import Product from '../components/Product'
-import products from '../products'
+import LanguageContext from '../langs/context'
 
 const ProductPage = ({ history }) => {
+    const lang = useContext(LanguageContext)
+    const { products } = lang.dictionary
+
     let { id: detailed } = useParams()
     detailed = Number(detailed)
 

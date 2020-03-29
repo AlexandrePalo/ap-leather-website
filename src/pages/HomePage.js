@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { withRouter } from 'react-router-dom'
 import { useSpring, animated } from 'react-spring'
-import products from '../products'
 import bgImg from '../media/leather_bg_4.jpg'
 import { ProductList } from './ProductPage'
+import LanguageContext from '../langs/context'
 
 const HomePage = props => {
+    const lang = useContext(LanguageContext)
+    const { products } = lang.dictionary
+
     const deZooming = useSpring({
         transform: 'scale(1.0)',
         from: { transform: 'scale(1.20)' },
@@ -34,7 +37,7 @@ const HomePage = props => {
             <ProductList
                 products={products}
                 onDiscoverClick={id => {
-                    props.history.push(`/collections/${id}`)
+                    props.history.push(`/creations/${id}`)
                 }}
             />
         </div>
