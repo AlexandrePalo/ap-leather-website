@@ -140,7 +140,9 @@ const fr = {
                     hex: '#0D231A'
                 },
                 { name: 'Fil lin blanc', hex: '#ffffff' }
-            ]
+            ],
+            link:
+                'https://www.etsy.com/fr/listing/790664011/leather-zip-pouch-s-l'
         },
         {
             id: 2,
@@ -157,7 +159,9 @@ const fr = {
                     hex: '#0D231A'
                 },
                 { name: 'Fil lin blanc', hex: '#ffffff' }
-            ]
+            ],
+            link:
+                'https://www.etsy.com/fr/listing/790664485/leather-passport-wallet'
         },
         {
             id: 3,
@@ -179,7 +183,9 @@ const fr = {
                     hex: '#0D231A'
                 },
                 { name: 'Fil lin blanc', hex: '#ffffff' }
-            ]
+            ],
+            link:
+                'https://www.etsy.com/fr/listing/776781946/leather-2-cards-case'
         },
         {
             id: 4,
@@ -197,7 +203,9 @@ const fr = {
                     hex: '#edc7b8'
                 },
                 { name: 'Fil lin blanc', hex: '#ffffff' }
-            ]
+            ],
+            link:
+                'https://www.etsy.com/fr/listing/790665063/leather-cards-wallet'
         },
         {
             id: 5,
@@ -213,7 +221,8 @@ const fr = {
                     hex: '#ED9753'
                 },
                 { name: 'Fil lin blanc', hex: '#ffffff' }
-            ]
+            ],
+            link: 'https://www.etsy.com/fr/listing/790661599/leather-pen-holder'
         },
         {
             id: 6,
@@ -231,7 +240,9 @@ const fr = {
                     hex: '#712C32'
                 },
                 { name: 'Fil lin blanc', hex: '#ffffff' }
-            ]
+            ],
+            link:
+                'https://www.etsy.com/fr/listing/776778930/leather-badge-holder'
         }
     ]
 }

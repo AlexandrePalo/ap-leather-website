@@ -51,6 +51,7 @@ const ProductDetailed = ({
     images,
     name,
     minPrice,
+    link,
     descriptions,
     colors,
     undetail
@@ -127,7 +128,7 @@ const ProductDetailed = ({
                 <div className="sm:flex flex-row items-center hidden mt-4">
                     <ButtonLink
                         label={product.purchaseButton.label}
-                        link="https://www.etsy.com/fr/"
+                        link={link}
                     />
                     <span className="text-primary-lighter ml-4 text-sm">
                         {product.price} {minPrice}€
@@ -141,10 +142,7 @@ const ProductDetailed = ({
                 {width && <Images images={images} width={width} />}
             </div>
             <div className="flex flex-row items-center sm:hidden p-4 text-sm">
-                <ButtonLink
-                    label={product.purchaseButton.label}
-                    link="https://www.etsy.com/fr/"
-                />
+                <ButtonLink label={product.purchaseButton.label} link={link} />
                 <span className="text-primary-lighter ml-4">
                     {product.price} {minPrice}€
                 </span>

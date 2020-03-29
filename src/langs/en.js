@@ -52,7 +52,7 @@ const en = {
             quality: {
                 title: 'QUALITY',
                 p:
-                    'All articles are tailored in Paris with high-quality italian leather and are fully handmade stitched with linen thread.'
+                    'All articles are tailored in Paris with high-quality Italian leather and are fully handmade stitched with linen thread.'
             }
         }
     },
@@ -140,7 +140,9 @@ const en = {
                     hex: '#0D231A'
                 },
                 { name: 'White linen thread', hex: '#ffffff' }
-            ]
+            ],
+            link:
+                'https://www.etsy.com/fr/listing/790664011/leather-zip-pouch-s-l'
         },
         {
             id: 2,
@@ -157,7 +159,9 @@ const en = {
                     hex: '#0D231A'
                 },
                 { name: 'White linen thread', hex: '#ffffff' }
-            ]
+            ],
+            link:
+                'https://www.etsy.com/fr/listing/790664485/leather-passport-wallet'
         },
         {
             id: 3,
@@ -165,7 +169,7 @@ const en = {
             minPrice: 20,
             images: [c2ards1, c2ards2],
             descriptions: [
-                'With its minimalist size, the cards wallet will easily slip into your pochet.',
+                'With its minimalist size, the cards wallet will easily slip into your pocket.',
                 'Perfect to have within easy reach your credit card and your transport pass. The thinness of the case allow you to use contact-free features throught leather, a daily valuable option !',
                 '2 card compartments.'
             ],
@@ -179,7 +183,9 @@ const en = {
                     hex: '#0D231A'
                 },
                 { name: 'White linen thread', hex: '#ffffff' }
-            ]
+            ],
+            link:
+                'https://www.etsy.com/fr/listing/776781946/leather-2-cards-case'
         },
         {
             id: 4,
@@ -197,7 +203,9 @@ const en = {
                     hex: '#edc7b8'
                 },
                 { name: 'White linen thread', hex: '#ffffff' }
-            ]
+            ],
+            link:
+                'https://www.etsy.com/fr/listing/790665063/leather-cards-wallet'
         },
         {
             id: 5,
@@ -213,7 +221,8 @@ const en = {
                     hex: '#ED9753'
                 },
                 { name: 'White linen thread', hex: '#ffffff' }
-            ]
+            ],
+            link: 'https://www.etsy.com/fr/listing/790661599/leather-pen-holder'
         },
         {
             id: 6,
@@ -231,7 +240,9 @@ const en = {
                     hex: '#712C32'
                 },
                 { name: 'White linen thread', hex: '#ffffff' }
-            ]
+            ],
+            link:
+                'https://www.etsy.com/fr/listing/776778930/leather-badge-holder'
         }
     ]
 }
