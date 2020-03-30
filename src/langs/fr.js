@@ -30,7 +30,7 @@ const fr = {
             p1:
                 'Les articles de la marque <span class="font-bold">AP Leather</span> sont confectionnés, à la main, à Paris, en France.',
             p2:
-                'Ces accessoires en cuir élégants, modernes et durables vont accompagneront tous les jours.',
+                'Ces accessoires en cuir élégants, modernes et durables vous accompagneront tous les jours.',
             p3:
                 "L'ensemble de ce site web, descriptions et photos sont la propriété exclusive d'Alexandre PALO."
         },
