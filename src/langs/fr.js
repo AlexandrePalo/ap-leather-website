@@ -169,7 +169,7 @@ const fr = {
             minPrice: 20,
             images: [c2ards1, c2ards2],
             descriptions: [
-                'Avec son format minimalist, ce porte-cartes se glissera facilement dans votre poche.',
+                'Avec son format minimaliste, ce porte-cartes se glissera facilement dans votre poche.',
                 "Parfait pour garder à portée de main votre carte bancaire et votre pass transport. La finesse de cet étui permet d'utiliser le sans contact à travers le cuir, une fonctionnalité bien appréciable au quotidien !",
                 '2 compartiments "cartes".'
             ],
@@ -230,7 +230,7 @@ const fr = {
             minPrice: 10,
             images: [badge1, badge2, badge3],
             descriptions: [
-                "Protéger votre badge d'entreprise avec style en le glissant dans cet élégant étui en cuir.",
+                "Protégez votre badge d'entreprise avec style en le glissant dans cet élégant étui en cuir.",
                 'Grâce à sa faible épaisseur, vous pouvez utiliser votre carte à travers le porte-badge sans contact.',
                 "Adapté pour une carte d'environ 86x56 mm (format carte bancaire)."
             ],
