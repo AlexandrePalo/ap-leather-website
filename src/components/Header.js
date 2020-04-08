@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react'
 import { useSpring, animated } from 'react-spring'
 import { Link as LinkRouter, useLocation } from 'react-router-dom'
-import logoWhite from '../media/logo-white.png'
+import logoWhite from '../media/compressed/logo-white-compressor.png'
 import LanguageContext from '../langs/context'
 import LanguageSelector from '../langs/LanguageSelector'
 

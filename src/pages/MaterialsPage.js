@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
-import butteroLeather from '../media/buttero_leather.jpg'
-import filChinois from '../media/fil_chinois.jpg'
-import coutureSellier from '../media/couture_sellier.jpg'
+import butteroLeather from '../media/compressed/buttero_leather-compressor.jpg'
+import filChinois from '../media/compressed/fil_chinois-compressor.jpg'
+import coutureSellier from '../media/compressed/couture_sellier-compressor.jpg'
 import LanguageContext from '../langs/context'
 
 const MaterialPage = () => {

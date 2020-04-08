@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import creator from '../media/creator.jpg'
+import creator from '../media/compressed/creator-compressor.jpg'
 import LanguageContext from '../langs/context'
 
 const BrandPage = () => {

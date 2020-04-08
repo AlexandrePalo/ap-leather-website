@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { withRouter } from 'react-router-dom'
 import { useSpring, animated } from 'react-spring'
-import bgImg from '../media/leather_bg_4.jpg'
+import bgImg from '../media/compressed/leather_bg_4-compressor.jpg'
 import { ProductList } from './ProductPage'
 import LanguageContext from '../langs/context'
 
