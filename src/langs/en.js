@@ -3,6 +3,8 @@ import pouch2 from '../media/compressed/pouch_2-compressor.jpg'
 import pouch3 from '../media/compressed/pouch_3-compressor.jpg'
 import travelWallet1 from '../media/compressed/travel_wallet_1-compressor.jpg'
 import travelWallet2 from '../media/compressed/travel_wallet_2-compressor.jpg'
+import travelWallet3 from '../media/compressed/travel_wallet_3-compressor.jpg'
+import travelWallet4 from '../media/compressed/travel_wallet_4-compressor.jpg'
 import c2ards1 from '../media/compressed/2_cards_1-compressor.jpg'
 import c2ards2 from '../media/compressed/2_cards_2-compressor.jpg'
 import c6ards1 from '../media/compressed/6_cards_1-compressor.jpg'
@@ -14,6 +16,8 @@ import pen3 from '../media/compressed/pen_3-compressor.jpg'
 import badge1 from '../media/compressed/badge_1-compressor.jpg'
 import badge2 from '../media/compressed/badge_2-compressor.jpg'
 import badge3 from '../media/compressed/badge_3-compressor.jpg'
+import badge4 from '../media/compressed/badge_4-compressor.jpg'
+import badge5 from '../media/compressed/badge_5-compressor.jpg'
 
 const en = {
     header: {
@@ -21,8 +25,8 @@ const en = {
             { label: 'HOME', to: '/' },
             { label: 'CREATIONS', to: '/creations' },
             { label: 'MATERIAL', to: '/material' },
-            { label: 'THE BRAND', to: '/brand' }
-        ]
+            { label: 'THE BRAND', to: '/brand' },
+        ],
     },
     footer: {
         about: {
@@ -32,7 +36,7 @@ const en = {
             p2:
                 'These elegant, modern and lasting leather accessories are going to come with you everyday.',
             p3:
-                'This whole website, descriptions and pictures are Alexandre PALO exclusive property.'
+                'This whole website, descriptions and pictures are Alexandre PALO exclusive property.',
         },
         networks: { title: 'SOCIAL NETWORKS' },
         contact: {
@@ -41,8 +45,8 @@ const en = {
                 "Contact me for any questions you may have. I'm able to create articles on request (color, size, model, ...).",
             p2:
                 'Do not hesitate to send me your suggestions in order to widen the collection !',
-            buttonLabel: 'CONTACT ME'
-        }
+            buttonLabel: 'CONTACT ME',
+        },
     },
     product: {
         discoverButton: { label: 'REVEAL' },
@@ -52,9 +56,9 @@ const en = {
             quality: {
                 title: 'QUALITY',
                 p:
-                    'All articles are tailored in Paris with high-quality Italian leather and are fully handmade stitched with linen thread.'
-            }
-        }
+                    'All articles are tailored in Paris with high-quality Italian leather and are fully handmade stitched with linen thread.',
+            },
+        },
     },
     brandPage: {
         p1:
@@ -62,7 +66,7 @@ const en = {
         p2:
             'Leather, fine and living, impose himself as the best material for their tailoring.',
         p3:
-            "All products are <span class='text-secondary font-bold'>handmade</span> in <span class='text-secondary font-bold'>Paris</span>, France."
+            "All products are <span class='text-secondary font-bold'>handmade</span> in <span class='text-secondary font-bold'>Paris</span>, France.",
     },
     materialPage: {
         leather: {
@@ -78,25 +82,25 @@ const en = {
             colors: [
                 {
                     label: 'Natural beige (undyed)',
-                    hex: '#edc7b8'
+                    hex: '#edc7b8',
                 },
                 {
                     label: 'Cognac brown',
-                    hex: '#732812'
+                    hex: '#732812',
                 },
                 {
                     label: 'Agave green',
-                    hex: '#0D231A'
+                    hex: '#0D231A',
                 },
                 {
                     label: 'Purple red',
-                    hex: '#712C32'
+                    hex: '#712C32',
                 },
                 {
                     label: 'Ocher brown',
-                    hex: '#ED9753'
-                }
-            ]
+                    hex: '#ED9753',
+                },
+            ],
         },
         thread: {
             title: 'Thread',
@@ -108,8 +112,8 @@ const en = {
             p3: 'More colors may be available on demand.',
             color: {
                 label: 'White linen',
-                hex: '#ffffff'
-            }
+                hex: '#ffffff',
+            },
         },
         stitch: {
             title: 'Stitching',
@@ -117,8 +121,8 @@ const en = {
             p1:
                 "All articles are <span class='font-bold'>hand stitched</span>, with the <span class='font-bold'>saddle stitch</span>.",
             p2:
-                'This stitch is very resistant over time. It is ideal for all leather products and give a aesthetically look to stitches.'
-        }
+                'This stitch is very resistant over time. It is ideal for all leather products and give a aesthetically look to stitches.',
+        },
     },
     products: [
         {
@@ -128,40 +132,49 @@ const en = {
             images: [pouch1, pouch2, pouch3],
             descriptions: [
                 'Coin purse or holdall, you decide !',
-                'Zip fastening. 2 sizes available : S (about 12 cm wide) and M (about 15 cm wide).'
+                'Zip fastening. 2 sizes available : S (about 12 cm wide) and M (about 15 cm wide).',
             ],
             colors: [
                 {
                     name: 'Cognac brown',
-                    hex: '#732812'
+                    hex: '#732812',
                 },
                 {
                     name: 'Agave green',
-                    hex: '#0D231A'
+                    hex: '#0D231A',
                 },
-                { name: 'White linen thread', hex: '#ffffff' }
+                { name: 'White linen thread', hex: '#ffffff' },
             ],
             link:
-                'https://www.etsy.com/fr/listing/790664011/leather-zip-pouch-s-l'
+                'https://www.etsy.com/fr/listing/790664011/leather-zip-pouch-s-l',
         },
         {
             id: 2,
             name: 'PASSPORT WALLET',
             minPrice: 30,
-            images: [travelWallet1, travelWallet2],
+            images: [
+                travelWallet1,
+                travelWallet2,
+                travelWallet3,
+                travelWallet4,
+            ],
             descriptions: [
                 'Protect your passport and all documents needed to your travel.',
-                '2 card compartments, a central pocket and a passport spot.'
+                '2 card compartments, a central pocket and a passport spot.',
             ],
             colors: [
                 {
                     name: 'Agave green',
-                    hex: '#0D231A'
+                    hex: '#0D231A',
                 },
-                { name: 'White linen thread', hex: '#ffffff' }
+                {
+                    name: 'Cognac brown',
+                    hex: '#732812',
+                },
+                { name: 'White linen thread', hex: '#ffffff' },
             ],
             link:
-                'https://www.etsy.com/fr/listing/790664485/leather-passport-wallet'
+                'https://www.etsy.com/fr/listing/790664485/leather-passport-wallet',
         },
         {
             id: 3,
@@ -171,21 +184,21 @@ const en = {
             descriptions: [
                 'With its minimalist size, the cards wallet will easily slip into your pocket.',
                 'Perfect to have within easy reach your credit card and your transport pass. The thinness of the case allow you to use contact-free features throught leather, a daily valuable option !',
-                '2 card compartments.'
+                '2 card compartments.',
             ],
             colors: [
                 {
                     name: 'Cognac brown',
-                    hex: '#732812'
+                    hex: '#732812',
                 },
                 {
                     name: 'Agave green',
-                    hex: '#0D231A'
+                    hex: '#0D231A',
                 },
-                { name: 'White linen thread', hex: '#ffffff' }
+                { name: 'White linen thread', hex: '#ffffff' },
             ],
             link:
-                'https://www.etsy.com/fr/listing/776781946/leather-2-cards-case'
+                'https://www.etsy.com/fr/listing/776781946/leather-2-cards-case',
         },
         {
             id: 4,
@@ -195,17 +208,17 @@ const en = {
             descriptions: [
                 'Light and minimalist, the cards wallet includes 6 compartments (3 on each side) and a central pocket, ideal for a few bills.',
                 'It will easily find its place in your vest pocket or inside your purse.',
-                '6 card compartment and a central pocket.'
+                '6 card compartment and a central pocket.',
             ],
             colors: [
                 {
                     name: 'Natural',
-                    hex: '#edc7b8'
+                    hex: '#edc7b8',
                 },
-                { name: 'White linen thread', hex: '#ffffff' }
+                { name: 'White linen thread', hex: '#ffffff' },
             ],
             link:
-                'https://www.etsy.com/fr/listing/790665063/leather-cards-wallet'
+                'https://www.etsy.com/fr/listing/790665063/leather-cards-wallet',
         },
         {
             id: 5,
@@ -213,38 +226,43 @@ const en = {
             minPrice: 10,
             images: [pen1, pen2, pen3],
             descriptions: [
-                'This elegant case will protect your fountain or ballpoint pen during all your trips. A must-have !'
+                'This elegant case will protect your fountain or ballpoint pen during all your trips. A must-have !',
             ],
             colors: [
                 {
                     name: 'Ocher brown',
-                    hex: '#ED9753'
+                    hex: '#ED9753',
                 },
-                { name: 'White linen thread', hex: '#ffffff' }
+                { name: 'White linen thread', hex: '#ffffff' },
             ],
-            link: 'https://www.etsy.com/fr/listing/790661599/leather-pen-holder'
+            link:
+                'https://www.etsy.com/fr/listing/790661599/leather-pen-holder',
         },
         {
             id: 6,
             name: 'BADGE HOLDER',
             minPrice: 10,
-            images: [badge1, badge2, badge3],
+            images: [badge1, badge2, badge3, badge4, badge5],
             descriptions: [
                 'Protect your enterprise badge with style by using the chic leather holder.',
                 'Thanks to its thinness, you are able to your badge through this holder.',
-                'Suitable for a card about 86x56 mm (credit card format).'
+                'Suitable for a card about 86x56 mm (credit card format).',
             ],
             colors: [
                 {
                     name: 'Purple red',
-                    hex: '#712C32'
+                    hex: '#712C32',
                 },
-                { name: 'White linen thread', hex: '#ffffff' }
+                {
+                    name: 'Cognac brown',
+                    hex: '#732812',
+                },
+                { name: 'White linen thread', hex: '#ffffff' },
             ],
             link:
-                'https://www.etsy.com/fr/listing/776778930/leather-badge-holder'
-        }
-    ]
+                'https://www.etsy.com/fr/listing/776778930/leather-badge-holder',
+        },
+    ],
 }
 
 export default en

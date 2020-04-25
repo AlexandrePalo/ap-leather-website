@@ -3,6 +3,8 @@ import pouch2 from '../media/compressed/pouch_2-compressor.jpg'
 import pouch3 from '../media/compressed/pouch_3-compressor.jpg'
 import travelWallet1 from '../media/compressed/travel_wallet_1-compressor.jpg'
 import travelWallet2 from '../media/compressed/travel_wallet_2-compressor.jpg'
+import travelWallet3 from '../media/compressed/travel_wallet_3-compressor.jpg'
+import travelWallet4 from '../media/compressed/travel_wallet_4-compressor.jpg'
 import c2ards1 from '../media/compressed/2_cards_1-compressor.jpg'
 import c2ards2 from '../media/compressed/2_cards_2-compressor.jpg'
 import c6ards1 from '../media/compressed/6_cards_1-compressor.jpg'
@@ -14,6 +16,8 @@ import pen3 from '../media/compressed/pen_3-compressor.jpg'
 import badge1 from '../media/compressed/badge_1-compressor.jpg'
 import badge2 from '../media/compressed/badge_2-compressor.jpg'
 import badge3 from '../media/compressed/badge_3-compressor.jpg'
+import badge4 from '../media/compressed/badge_4-compressor.jpg'
+import badge5 from '../media/compressed/badge_5-compressor.jpg'
 
 const fr = {
     header: {
@@ -21,8 +25,8 @@ const fr = {
             { label: 'ACCUEIL', to: '/' },
             { label: 'CREATIONS', to: '/creations' },
             { label: 'MATERIAUX', to: '/material' },
-            { label: 'LA MARQUE', to: '/brand' }
-        ]
+            { label: 'LA MARQUE', to: '/brand' },
+        ],
     },
     footer: {
         about: {
@@ -32,7 +36,7 @@ const fr = {
             p2:
                 'Ces accessoires en cuir élégants, modernes et durables vous accompagneront tous les jours.',
             p3:
-                "L'ensemble de ce site web, descriptions et photos sont la propriété exclusive d'Alexandre PALO."
+                "L'ensemble de ce site web, descriptions et photos sont la propriété exclusive d'Alexandre PALO.",
         },
         networks: { title: 'RESEAUX' },
         contact: {
@@ -41,8 +45,8 @@ const fr = {
                 'Contactez-moi pour toutes vos questions. Je peux fabriquer des produits à la demande (couleur, taille, modèle, ...).',
             p2:
                 "N'hésitez pas à m'envoyez vous suggestions pour agrandir la collection !",
-            buttonLabel: 'ME CONTACTER'
-        }
+            buttonLabel: 'ME CONTACTER',
+        },
     },
     product: {
         discoverButton: { label: 'DECOUVRIR' },
@@ -52,9 +56,9 @@ const fr = {
             quality: {
                 title: 'QUALITE',
                 p:
-                    'Tous les articles sont confectionnés à Paris avec du cuir italien de grande qualité et sont cousus intégralement à la main au fil de lin.'
-            }
-        }
+                    'Tous les articles sont confectionnés à Paris avec du cuir italien de grande qualité et sont cousus intégralement à la main au fil de lin.',
+            },
+        },
     },
     brandPage: {
         p1:
@@ -62,7 +66,7 @@ const fr = {
         p2:
             "Le cuir, noble et vivant, s'est imposé comme un matériau de choix pour leur confection.",
         p3:
-            "Tous les articles sont fabriqués <span class='text-secondary font-bold'>à la main</span>, à <span class='text-secondary font-bold'>Paris</span> en France."
+            "Tous les articles sont fabriqués <span class='text-secondary font-bold'>à la main</span>, à <span class='text-secondary font-bold'>Paris</span> en France.",
     },
     materialPage: {
         leather: {
@@ -78,25 +82,25 @@ const fr = {
             colors: [
                 {
                     label: 'Beige naturel (non teint)',
-                    hex: '#edc7b8'
+                    hex: '#edc7b8',
                 },
                 {
                     label: 'Brun cognac',
-                    hex: '#732812'
+                    hex: '#732812',
                 },
                 {
                     label: 'Vert agave',
-                    hex: '#0D231A'
+                    hex: '#0D231A',
                 },
                 {
                     label: 'Rouge pourpre',
-                    hex: '#712C32'
+                    hex: '#712C32',
                 },
                 {
                     label: 'Brun ocre',
-                    hex: '#ED9753'
-                }
-            ]
+                    hex: '#ED9753',
+                },
+            ],
         },
         thread: {
             title: 'Fil',
@@ -108,8 +112,8 @@ const fr = {
             p3: "D'autres couleurs sont disponibles à la demande.",
             color: {
                 label: 'Lin blanc',
-                hex: '#ffffff'
-            }
+                hex: '#ffffff',
+            },
         },
         stitch: {
             title: 'Couture',
@@ -117,8 +121,8 @@ const fr = {
             p1:
                 "Tous les objets sont <span class='font-bold'>cousus à la main</span>, selon le <span class='font-bold'>point sellier</span>.",
             p2:
-                'Ce point est très résistant et durable dans le temps. Il est idéal pour tous les objets en cuir et donne un aspect esthétique à la couture.'
-        }
+                'Ce point est très résistant et durable dans le temps. Il est idéal pour tous les objets en cuir et donne un aspect esthétique à la couture.',
+        },
     },
     products: [
         {
@@ -128,40 +132,49 @@ const fr = {
             images: [pouch1, pouch2, pouch3],
             descriptions: [
                 'Porte-monnaie ou pochette fourre-tout, à vous de décider !',
-                'Fermeture par zip. Disponible en deux tailles : S (environ 12 cm de large) et M (environ 15 cm de large).'
+                'Fermeture par zip. Disponible en deux tailles : S (environ 12 cm de large) et M (environ 15 cm de large).',
             ],
             colors: [
                 {
                     name: 'Brun cognac',
-                    hex: '#732812'
+                    hex: '#732812',
                 },
                 {
                     name: 'Vert agave',
-                    hex: '#0D231A'
+                    hex: '#0D231A',
                 },
-                { name: 'Fil lin blanc', hex: '#ffffff' }
+                { name: 'Fil lin blanc', hex: '#ffffff' },
             ],
             link:
-                'https://www.etsy.com/fr/listing/790664011/leather-zip-pouch-s-l'
+                'https://www.etsy.com/fr/listing/790664011/leather-zip-pouch-s-l',
         },
         {
             id: 2,
             name: 'PORTE PASSEPORT',
             minPrice: 30,
-            images: [travelWallet1, travelWallet2],
+            images: [
+                travelWallet1,
+                travelWallet2,
+                travelWallet3,
+                travelWallet4,
+            ],
             descriptions: [
                 'Protégez votre passeport et tous les documents nécessaires à votre voyage.',
-                '2 compartiments "cartes", une poche centrale et un emplacement passeport.'
+                '2 compartiments "cartes", une poche centrale et un emplacement passeport.',
             ],
             colors: [
                 {
                     name: 'Vert agave',
-                    hex: '#0D231A'
+                    hex: '#0D231A',
                 },
-                { name: 'Fil lin blanc', hex: '#ffffff' }
+                {
+                    name: 'Brun cognac',
+                    hex: '#732812',
+                },
+                { name: 'Fil lin blanc', hex: '#ffffff' },
             ],
             link:
-                'https://www.etsy.com/fr/listing/790664485/leather-passport-wallet'
+                'https://www.etsy.com/fr/listing/790664485/leather-passport-wallet',
         },
         {
             id: 3,
@@ -171,21 +184,21 @@ const fr = {
             descriptions: [
                 'Avec son format minimaliste, ce porte-cartes se glissera facilement dans votre poche.',
                 "Parfait pour garder à portée de main votre carte bancaire et votre pass transport. La finesse de cet étui permet d'utiliser le sans contact à travers le cuir, une fonctionnalité bien appréciable au quotidien !",
-                '2 compartiments "cartes".'
+                '2 compartiments "cartes".',
             ],
             colors: [
                 {
                     name: 'Brun cognac',
-                    hex: '#732812'
+                    hex: '#732812',
                 },
                 {
                     name: 'Vert agave',
-                    hex: '#0D231A'
+                    hex: '#0D231A',
                 },
-                { name: 'Fil lin blanc', hex: '#ffffff' }
+                { name: 'Fil lin blanc', hex: '#ffffff' },
             ],
             link:
-                'https://www.etsy.com/fr/listing/776781946/leather-2-cards-case'
+                'https://www.etsy.com/fr/listing/776781946/leather-2-cards-case',
         },
         {
             id: 4,
@@ -195,17 +208,17 @@ const fr = {
             descriptions: [
                 "Léger et minimaliste, ce porte-cartes comporte 6 emplacements (3 sur chaque face) ainsi qu'une poche centrale, idéale pour y ranger quelques billets.",
                 'Il trouvera facilement sa place dans la poche de votre veste ou dans votre sac à main.',
-                '6 compartiments "cartes" et une poche centrale.'
+                '6 compartiments "cartes" et une poche centrale.',
             ],
             colors: [
                 {
                     name: 'Naturel',
-                    hex: '#edc7b8'
+                    hex: '#edc7b8',
                 },
-                { name: 'Fil lin blanc', hex: '#ffffff' }
+                { name: 'Fil lin blanc', hex: '#ffffff' },
             ],
             link:
-                'https://www.etsy.com/fr/listing/790665063/leather-cards-wallet'
+                'https://www.etsy.com/fr/listing/790665063/leather-cards-wallet',
         },
         {
             id: 5,
@@ -213,38 +226,43 @@ const fr = {
             minPrice: 10,
             images: [pen1, pen2, pen3],
             descriptions: [
-                'Cet élégant étui protégera votre stylo plume ou bille lors de vos déplacements. Un indispensable !'
+                'Cet élégant étui protégera votre stylo plume ou bille lors de vos déplacements. Un indispensable !',
             ],
             colors: [
                 {
                     name: 'Brun ocre',
-                    hex: '#ED9753'
+                    hex: '#ED9753',
                 },
-                { name: 'Fil lin blanc', hex: '#ffffff' }
+                { name: 'Fil lin blanc', hex: '#ffffff' },
             ],
-            link: 'https://www.etsy.com/fr/listing/790661599/leather-pen-holder'
+            link:
+                'https://www.etsy.com/fr/listing/790661599/leather-pen-holder',
         },
         {
             id: 6,
             name: 'PORTE-BADGE',
             minPrice: 10,
-            images: [badge1, badge2, badge3],
+            images: [badge1, badge2, badge3, badge4, badge5],
             descriptions: [
                 "Protégez votre badge d'entreprise avec style en le glissant dans cet élégant étui en cuir.",
                 'Grâce à sa faible épaisseur, vous pouvez utiliser votre carte à travers le porte-badge sans contact.',
-                "Adapté pour une carte d'environ 86x56 mm (format carte bancaire)."
+                "Adapté pour une carte d'environ 86x56 mm (format carte bancaire).",
             ],
             colors: [
                 {
                     name: 'Rouge pourpre',
-                    hex: '#712C32'
+                    hex: '#712C32',
                 },
-                { name: 'Fil lin blanc', hex: '#ffffff' }
+                {
+                    name: 'Brun cognac',
+                    hex: '#732812',
+                },
+                { name: 'Fil lin blanc', hex: '#ffffff' },
             ],
             link:
-                'https://www.etsy.com/fr/listing/776778930/leather-badge-holder'
-        }
-    ]
+                'https://www.etsy.com/fr/listing/776778930/leather-badge-holder',
+        },
+    ],
 }
 
 export default fr
